@@ -42,12 +42,7 @@ public class PrimePalindromeMain {
 
 	private static int highestPalindrome() {
 		int[] primes = reverseArray(getPrimes(1000));
-		for (int i = 0; i < primes.length; i++) {
-			int value = primes[i];
-			if (value == reverse(value))
-				return value;
-		}
-		return 2;
+		return IntStream.of(primes).filter(x -> x == reverse(x)).findFirst().orElse(2);
 	}
 
 	public static void main(String[] args) {
