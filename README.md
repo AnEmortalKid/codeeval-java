@@ -3,8 +3,9 @@ a repository with my solutions to the codeeval stuff
 
 # Easy Solutions
 - fizzbuzz
-- primepalindrome
-- sumofprimes
+- prime palindrome
+- sum of primes
+- reverse words
 
 # Medium Solutions
 
