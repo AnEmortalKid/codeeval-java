@@ -1,6 +1,8 @@
 package com.anemortalkid.codeeval.java.easy.utils;
 
+import java.util.Arrays;
 import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 /**
  * Location of handy functions that I have to re copy paste into the codeeval
@@ -44,9 +46,24 @@ public final class HandyUtils {
 	 *         otherwise
 	 */
 	public static boolean isPrime(int n) {
-		for (int i = 2; i < n + 1; i++) {
-			if (n % i == 0 && i != n)
+		if (n % 2 == 0 & n != 2)
+			return false;
+
+		for (int i = 2; i < n / 2; i++) {
+			if (n % i == 0)
 				return false;
+		}
+		return true;
+	}
+
+	public static boolean isPrime(long l) {
+		if (l % 2 == 0 && l != 2)
+			return false;
+
+		for (long i = 2; i < l / 2; i++) {
+			if (l % i == 0) {
+				return false;
+			}
 		}
 		return true;
 	}
@@ -59,6 +76,25 @@ public final class HandyUtils {
 	 */
 	public static int[] getPrimes(int max) {
 		return IntStream.rangeClosed(2, max).filter(i -> isPrime(i)).toArray();
+	}
+
+	/**
+	 * @param n
+	 *            the number of primes to return
+	 * @return an array with the desired number of primes
+	 */
+	public static long[] getNPrimes(int n) {
+		long[] primes = new long[n];
+		long counter = 2;
+		int index = 0;
+		while (index != n) {
+			if (isPrime(counter)) {
+				primes[index] = counter;
+				index++;
+			}
+			counter++;
+		}
+		return primes;
 	}
 
 }
