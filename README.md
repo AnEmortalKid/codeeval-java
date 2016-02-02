@@ -6,6 +6,7 @@ a repository with my solutions to the codeeval stuff
 - prime palindrome
 - sum of primes
 - reverse words
+- multiples
 
 # Medium Solutions
 
