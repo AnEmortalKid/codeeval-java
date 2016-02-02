@@ -1,4 +1,4 @@
-package com.anemortalkid.codeeval.java.easy.fizzbuzz.reversewords;
+package com.anemortalkid.codeeval.java.easy.reversewords;
 
 import java.io.IOException;
 import java.nio.file.Files;
